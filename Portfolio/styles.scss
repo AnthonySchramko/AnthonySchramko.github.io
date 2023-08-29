@@ -1,0 +1,37 @@
+@use "./partials/_breakpoints.scss";
+@use "./partials/_mixins.scss";
+@use "./partials/_palette.scss";
+@import "./partials/_mixins.scss";
+.header {
+  @include centered-columns;
+  width: 100%;
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+}
+#navbar-container {
+  height: 4em;
+  width: 100%;
+  background-color: palette.$palette-4;
+  border: 1px solid black;
+}
+body {
+  background-color: palette.$palette-1;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+footer {
+  background-color: palette.$palette-4;
+}
+.main-container {
+  @include centered-columns;
+  & .description {
+    background-color: palette.$palette-2;
+    color: white;
+  }
+}

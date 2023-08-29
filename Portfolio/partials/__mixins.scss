@@ -1,0 +1,13 @@
+@mixin centered-columns() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin size($height, $margin) {
+  height: $height;
+  margin: $margin;
+}
+@mixin mainCard() {
+  display: grid;
+}

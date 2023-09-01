@@ -11,3 +11,10 @@
 @mixin mainCard() {
   display: grid;
 }
+@mixin flex($cont: center, $align: center, $dir: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $cont;
+  align-items: $align;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}

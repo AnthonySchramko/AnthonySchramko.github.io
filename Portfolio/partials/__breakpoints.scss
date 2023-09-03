@@ -8,12 +8,12 @@ $lg: 992;
   }
 }
 @mixin tablet {
-  @media only screen and (min-width: ($sm +1px)) and (max-width: $md) {
+  @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
     @content;
   }
 }
 @mixin computer {
-  @media only screen and (min-width: ($md +1px)) and (max-width: $lg) {
+  @media only screen and (min-width: ($md + 1px)) and (max-width: $lg) {
     @content;
   }
 }

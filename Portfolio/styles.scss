@@ -2,36 +2,90 @@
 @use "./partials/_mixins.scss";
 @use "./partials/_palette.scss";
 @import "./partials/_mixins.scss";
+html {
+  background-color: palette.$palette-2;
+}
 .header {
-  @include centered-columns;
+  padding-top: 60px;
   width: 100%;
   text-align: center;
 }
 .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  list-style: none;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: palette.$palette-3;
+  padding: 10px 0px 10px 0px;
 }
-#navbar-container {
-  height: 4em;
-  width: 100%;
-  background-color: palette.$palette-4;
-  border: 1px solid black;
+.navbar-list {
+  @include mixins.flex($cont: space-evenly);
+  list-style: none;
+  color: palette.$palette-4;
+
+  &__link {
+    color: palette.$palette-4;
+    text-decoration: none;
+  }
 }
 body {
-  background-color: palette.$palette-1;
+  background-color: palette.$palette-2;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
 }
 footer {
-  background-color: palette.$palette-4;
+  background-color: palette.$palette-3;
 }
-.main-container {
-  @include centered-columns;
-  & .description {
+.section {
+  &__gallery {
+    @include mixins.flex($dir: column);
     background-color: palette.$palette-2;
-    color: white;
+    color: palette.$palette-4;
+    overflow-x: hidden;
+    padding: 0 3rem;
+    @include breakpoints.tablet {
+      @include mixins.projects-styling-phone;
+      @include mixins.flex($dir: column);
+    }
+    @include breakpoints.phone {
+      @include mixins.projects-styling-phone;
+      @include mixins.flex($dir: column);
+    }
+  }
+  &__projects {
+    @include mixins.flex($cont: space-between);
+    border-bottom: 2px solid palette.$palette-4;
+    height: auto;
+    @include breakpoints.tablet {
+      @include mixins.flex($cont: center, $dir: column);
+      @include mixins.projects-styling-phone;
+    }
+    @include breakpoints.phone {
+      @include mixins.projects-styling-phone;
+    }
+  }
+  &--left {
+    @include mixins.flex($dir: row-reverse);
+  }
+  &--right {
+    @include mixins.flex();
+  }
+  &__media {
+    @include mixins.flex($cont: space-between);
+    padding: 3% 2%;
+    margin-bottom: 1.5rem;
+    height: auto;
+    width: 500px;
+  }
+  &--header {
+    @include mixins.flex();
+    padding: 20px 10px 10px 10px;
+    padding-top: 80px;
+  }
+  &__icons {
+    margin-top: 10px;
+    font-size: 45px;
+    &:hover {
+      color: palette.$palette-4;
+    }
+    padding: 5px;
   }
 }

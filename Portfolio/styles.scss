@@ -41,6 +41,7 @@ footer {
     color: palette.$palette-4;
     overflow-x: hidden;
     padding: 0 3rem;
+    border-bottom: 2px solid palette.$palette-4;
     @include breakpoints.tablet {
       @include mixins.projects-styling-phone;
       @include mixins.flex($dir: column);
@@ -61,6 +62,12 @@ footer {
     @include breakpoints.phone {
       @include mixins.projects-styling-phone;
     }
+    &--icons {
+      margin-top: 10px;
+      font-size: 45px;
+      color: palette.$palette-4;
+      padding: 5px;
+    }
   }
   &--left {
     @include mixins.flex($dir: row-reverse);
@@ -80,12 +87,27 @@ footer {
     padding: 20px 10px 10px 10px;
     padding-top: 80px;
   }
-  &__icons {
-    margin-top: 10px;
-    font-size: 45px;
-    &:hover {
+  &__skills {
+    // @include mixins.flex();
+    height: 60vh;
+    width: 70vh;
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+    margin: 10vh 10vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    &--icons {
+      padding: 20px;
+      font-size: 80px;
       color: palette.$palette-4;
+      @include mixins.flex($dir: row);
     }
-    padding: 5px;
+    @include breakpoints.phone {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
   }
 }

@@ -36,7 +36,7 @@
     flex-wrap: wrap;
   }
 }
-.navbar__list__link {
+.navbar__list--link {
   color: #102c57;
   text-decoration: none;
 }

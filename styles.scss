@@ -27,7 +27,7 @@
     @include breakpoints.phone {
       @include mixins.flex($wrap: wrap, $cont: space-evenly);
     }
-    &__link {
+    &--link {
       color: palette.$palette-4;
       text-decoration: none;
     }

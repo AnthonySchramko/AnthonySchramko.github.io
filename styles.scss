@@ -1,0 +1,163 @@
+@use "./partials/_breakpoints.scss";
+@use "./partials/_mixins.scss";
+@use "./partials/_palette.scss";
+@import "./partials/_mixins.scss";
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.header {
+  padding-top: 60px;
+  width: 100%;
+  text-align: center;
+}
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: palette.$palette-3;
+  padding: 10px 0px 10px 0px;
+}
+.navbar-list {
+  @include mixins.flex($cont: space-evenly);
+  list-style: none;
+  color: palette.$palette-4;
+  @include breakpoints.phone {
+    @include mixins.flex($wrap: wrap, $cont: space-evenly);
+  }
+
+  &__link {
+    color: palette.$palette-4;
+    text-decoration: none;
+  }
+}
+body {
+  background-color: palette.$palette-2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer {
+  background-color: palette.$palette-3;
+  &--icons {
+    color: palette.$palette-4;
+    font-size: 20px;
+  }
+}
+.section {
+  &__gallery {
+    @include mixins.flex($dir: column);
+    background-color: palette.$palette-1;
+    color: palette.$palette-4;
+    overflow-x: hidden;
+    border-bottom: 2px solid palette.$palette-4;
+    padding-bottom: 10vh;
+    &--shared {
+      @include mixins.flex($dir: row);
+      height: 60vh;
+      @include breakpoints.tablet {
+        @include mixins.flex($dir: column);
+      }
+      @include breakpoints.phone {
+        @include mixins.flex($dir: column);
+      }
+    }
+  }
+  &__projects {
+    @include mixins.flex($cont: space-between);
+    border-top: 2px solid palette.$palette-4;
+    height: auto;
+    &--icons {
+      margin-top: 10px;
+      font-size: 45px;
+      color: palette.$palette-4;
+      padding: 5px;
+    }
+    &__description {
+      width: 50%;
+    }
+  }
+  &--left {
+    @include mixins.flex($dir: row-reverse);
+    @include breakpoints.tablet {
+      @include mixins.flex($cont: center, $wrap: wrap);
+    }
+    @include breakpoints.phone {
+      @include mixins.flex($cont: center, $wrap: wrap);
+    }
+  }
+  &--right {
+    @include mixins.flex();
+    @include breakpoints.tablet {
+      @include mixins.flex($cont: center, $wrap: wrap);
+    }
+    @include breakpoints.phone {
+      @include mixins.flex($cont: center, $wrap: wrap);
+    }
+  }
+  &__media {
+    @include mixins.flex($cont: space-between);
+    padding: 3% 2%;
+    margin-bottom: 1.5rem;
+    height: 300px;
+    width: 500px;
+    @include breakpoints.phone {
+      width: 100%;
+      height: 30vh;
+    }
+  }
+  &--header {
+    @include mixins.flex();
+    padding: 20px 10px 10px 10px;
+    padding-top: 80px;
+    background-color: palette.$palette-1;
+  }
+  &__skills {
+    width: 80%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    border-left-style: solid;
+    border-right-style: solid;
+
+    margin: 10vh 30vh;
+
+    &--icons {
+      height: 90px;
+      width: 90px;
+      font-size: 80px;
+      @include mixins.flex;
+      padding: 10vh;
+    }
+    @include breakpoints.phone {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+  &__about {
+    border-right: 2px solid palette.$palette-4;
+    padding: 5vh;
+    font-size: 20px;
+    @include breakpoints.tablet {
+      border-right: 0px;
+      border-bottom: 2px solid palette.$palette-4;
+    }
+    @include breakpoints.phone {
+      border-right: 0px;
+      border-bottom: 2px solid palette.$palette-4;
+      padding-bottom: 5vh;
+    }
+  }
+  &__contact {
+    padding: 5vh;
+    font-size: 20px;
+    &--icons {
+      color: palette.$palette-4;
+      font-size: 20px;
+    }
+  }
+}

@@ -20,20 +20,20 @@
   width: 100%;
   background-color: palette.$palette-3;
   padding: 10px 0px 10px 0px;
-}
-.navbar-list {
-  @include mixins.flex($cont: space-evenly);
-  list-style: none;
-  color: palette.$palette-4;
-  @include breakpoints.phone {
-    @include mixins.flex($wrap: wrap, $cont: space-evenly);
-  }
-
-  &__link {
+  &__list {
+    @include mixins.flex($cont: space-evenly);
+    list-style: none;
     color: palette.$palette-4;
-    text-decoration: none;
+    @include breakpoints.phone {
+      @include mixins.flex($wrap: wrap, $cont: space-evenly);
+    }
+    &__link {
+      color: palette.$palette-4;
+      text-decoration: none;
+    }
   }
 }
+
 body {
   background-color: palette.$palette-2;
   font-family: Arial, Helvetica, sans-serif;

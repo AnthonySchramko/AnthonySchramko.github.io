@@ -1,15 +1,81 @@
-# AnthonySchramko Portfolio
+# Title {Replace with the project title}
 
-### This is my web-portfolio's repository page. On this portfolio, you will find information about me, my development with the technology and any projects I have worked on.
+{add test badges here, all projects you build from here on out will have tests, therefore you should have github workflow badges at the top of your repositories: [Github Workflow Badges](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)}
 
-## Purpose
+## Demo & Snippets
 
-### The purpose of this portfolio was to show off my web-developer skills and other projects to all. This webpage demonstrates my developing knowledge of HTML and SCSS.
+- Include hosted link
+- Include images of app if CLI or Client App
 
-## Process
+---
 
-### I went about this project in small batches, breaking down the bigger problem and making it easier on myself. At first, I made the general layout of my HTML webpage, then worked on generic scss mixins/breakpoints that I knew I would use throughout the project. After this, I would make branches and work on specific sections at a time, any scss required and the HTML behind it. Towards the end, I spent more time making my SCSS look a bit better, website palettes and fixing any problems with differing screen sizes.
+## Requirements / Purpose
 
-## Review
+- MVP
+- purpose of project
+- stack used and why
 
-### I feel like my frontend work could use a bit more, but overall I feel like I tackled this project well. Most of this was new to me, so learning a lot and applying what was taught was fun/interesting. As I progressed down the project, it made me realise more and more about what I was doing and everything was becoming more purposeful instead of forceful.
+---
+
+## Build Steps
+
+- how to build / run project
+- use proper code snippets if there are any commands to run
+
+---
+
+## Design Goals / Approach
+
+- Design goals
+- why did you implement this the way you did?
+
+---
+
+## Features
+
+- What features does the project have?
+- list them...
+
+---
+
+## Known issues
+
+- Remaining bugs, things that have been left unfixed
+- Features that are buggy / flimsy
+
+---
+
+## Future Goals
+
+- What are the immediate features you'd add given more time
+
+---
+
+## Change logs
+
+- Write a paragraph labelled with the date every day you work on the project to discuss what you've done for the say. Be specific about the changes that have happened for that day.
+
+### 13/02/2022 - {Theme of changes if applicable}
+
+- Extended the expiry time of JWT tokens on the backend
+- Added users to cohort response payload
+- Centralized API base URL on frontend using the proxy `package.json` property
+
+---
+
+## What did you struggle with?
+
+- What? Why? How?
+
+---
+
+## Licensing Details
+
+- What type of license are you releasing this under?
+
+---
+
+## Further details, related projects, reimplementations
+
+- Is this project a reimplementation for something you've done in the past? if so explain it and link it here.
+- If it's an API, is there a client app that works with this project? link it

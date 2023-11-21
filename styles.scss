@@ -67,6 +67,7 @@ body {
   &__projects {
     @include mixins.flex($cont: space-between);
     border-top: 2px solid palette.$palette-4;
+    width: 100vw;
     height: auto;
     &--icons {
       margin-top: 10px;
@@ -99,13 +100,17 @@ body {
   &__media {
     @include mixins.flex($cont: space-between);
     padding: 3% 2%;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     height: 300px;
-    width: 500px;
+    width: 400px;
+    padding-right: 2em;
     @include breakpoints.phone {
-      width: 100%;
       height: 30vh;
     }
+  }
+  &__text {
+    width: 100%;
+    margin: 1em;
   }
   &--header {
     @include mixins.flex();
